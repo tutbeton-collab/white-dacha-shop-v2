@@ -15,13 +15,7 @@
       --radius: 16px;
     }
     body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-    .header { background: linear-gradient(135deg, var(--green), var(--green-light)); color: white; padding: 20px 20px 24px; position: sticky; top: 0; z-index: 100; }
-    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-icon { width: 42px; height: 42px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-    .logo-text h1 { font-size: 18px; font-weight: 700; }
-    .logo-text span { font-size: 12px; opacity: 0.85; }
-    .header-cart { width: 44px; height: 44px; background: rgba(255,255,255,0.2); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; position: relative; }
+    .header-cart { width: 44px; height: 44px; background: rgba(0,0,0,0.06); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; position: relative; }
     .header-cart .badge { position: absolute; top: -4px; right: -4px; background: var(--orange); color: white; border-radius: 10px; min-width: 20px; height: 20px; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; display: none; }
     .search-bar { background: rgba(255,255,255,0.15); border-radius: 12px; padding: 10px 14px; display: flex; align-items: center; gap: 8px; }
     .search-bar input { background: none; border: none; color: white; font-size: 14px; width: 100%; outline: none; }
@@ -78,20 +72,18 @@
     .empty-cart { text-align: center; padding: 60px 20px; color: var(--text-sec); }
     .banner { width: 100%; margin: 0; }
     .banner img { width: 100%; height: auto; display: block; object-fit: cover; max-height: 200px; }
+    .cat-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
   </style>
 </head>
 <body>
 <script src="https://st.max.ru/js/max-web-app.js"></script>
 <div id="app">
   <div id="page-catalog" class="page active">
-    <div class="header">
-      <div class="header-top">
-        <div class="logo"><div class="logo-icon">🌿</div><div class="logo-text"><h1>Белая дача</h1><span>Свежие овощи с грядки</span></div></div>
-        <div class="header-cart" onclick="showPage('cart')">🛒<span class="badge" id="header-cart-count">0</span></div>
-      </div>
-      </div>
-    </div>
     <div class="banner"><img src="https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/banner.jpg" alt="Белая дача"></div>
+    <div class="cat-row">
+      <div class="section-title">Каталог</div>
+      <div class="header-cart" onclick="showPage('cart')">🛒<span class="badge" id="header-cart-count">0</span></div>
+    </div>
   <div class="categories">
       <div class="cat-btn active" onclick="filterCategory('all',this)">Все</div>
       <div class="cat-btn" onclick="filterCategory('vegetables',this)">🥬 Овощи</div>
