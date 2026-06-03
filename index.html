@@ -129,23 +129,24 @@
 <script>
 // Real photos from the farm (local paths for now, will be replaced with hosted URLs)
 const PHOTOS = {
-  tomato: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/tomato.jpg',    // №25
-  cucumber: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/cucumber.jpg', // №11
-  pepper: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/pepper.jpg',     // №8
-  eggplant: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/eggplant.jpg', // №9
-  potato: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/potato.webp',     // existing webp
+  tomato: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/tomato.jpg',
+  cucumber: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/cucumber.jpg',
+  pepper: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/pepper.jpg',
+  potato: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/potato.webp',
+  corn: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/corn.jpg',
+  watermelon: 'https://raw.githubusercontent.com/tutbeton-collab/white-dacha-shop-v2/main/watermelon.jpg',
 };
 
 const PRODUCTS = [
   { id: 1, name: 'Помидоры', emoji: '🍅', price: 500, unitName: 'ведро', note: 'Спелые, с грядки', cat: 'vegetables', img: PHOTOS.tomato },
   { id: 2, name: 'Огурцы', emoji: '🥒', price: 500, unitName: 'ведро', note: 'Хрустящие, свежие', cat: 'vegetables', img: PHOTOS.cucumber },
-  { id: 3, name: 'Перец болгарский', emoji: '🫑', price: 250, unitName: 'ведро', note: 'Сочный, сладкий', cat: 'vegetables', img: PHOTOS.pepper },
+  { id: 3, name: 'Перец болгарский', emoji: '🫑', price: 250, unitName: 'ведро', note: 'Сочный, сладкий', cat: 'vegetables', img: null },
   { id: 4, name: 'Баклажаны', emoji: '🍆', price: 300, unitName: 'ведро', note: 'Отборные', cat: 'vegetables', img: PHOTOS.eggplant },
   { id: 5, name: 'Картошка', emoji: '🥔', price: 200, unitName: 'ведро', note: 'Молодой картофель', cat: 'potato', img: PHOTOS.potato },
   { id: 6, name: 'Перец острый', emoji: '🌶️', price: 100, unitName: '12 шт', note: 'Острый, ароматный', cat: 'vegetables', img: null },
-  { id: 7, name: 'Кукуруза', emoji: '🌽', price: 100, unitName: '3 шт', note: 'Сладкая, молодая', cat: 'vegetables', img: null },
+  { id: 7, name: 'Кукуруза', emoji: '🌽', price: 100, unitName: '3 шт', note: 'Сладкая, молодая', cat: 'vegetables', img: PHOTOS.corn },
   { id: 8, name: 'Кабачок', emoji: '🥒', price: 100, unitName: '3 шт', note: 'Небольшие, нежные', cat: 'vegetables', img: null },
-  { id: 9, name: 'Арбуз', emoji: '🍉', price: 100, unitName: 'шт', note: 'Спелый, сладкий', cat: 'vegetables', img: null },
+  { id: 9, name: 'Арбуз', emoji: '🍉', price: 100, unitName: 'шт', note: 'Спелый, сладкий', cat: 'vegetables', img: PHOTOS.watermelon },
   { id: 10, name: 'Укроп', emoji: '🌿', price: 50, unitName: 'пучок', note: 'Ароматный, свежий', cat: 'greens', img: null },
 ];
 
